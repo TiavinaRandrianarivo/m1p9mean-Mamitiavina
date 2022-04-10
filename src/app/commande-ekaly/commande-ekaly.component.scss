@@ -1,0 +1,32 @@
+$black: #000;
+$accent: #fd7e14;
+$time: 0.3s;
+$easing: cubic-bezier(0.4, 0, 0.2, 1);
+
+@mixin shadow {
+    box-shadow: 0 30px 25px -20px rgba($black, 0.15);
+  }
+  
+  @mixin shadow-dark {
+    box-shadow: 0 36px 28px -20px rgba($black, 0.20);
+  }
+
+.bd{
+  margin-top:5% ;
+}
+
+.table{
+  width:125%;
+}
+
+.product__btn {
+    color:#fff;
+    background-color: #cd8d2ee0;
+    transition: background-color $time $easing, box-shadow $time $easing;
+    @include shadow;
+    
+    &:hover {
+      @include shadow-dark;
+      background-color: mix($accent, $black, 95%);
+    }
+  }

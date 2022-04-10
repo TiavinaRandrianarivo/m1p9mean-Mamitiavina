@@ -1,0 +1,24 @@
+<div class="card">
+    <form #f="ngForm" (ngSubmit)="onRegistrer(f)" method="post">
+      <h2>New deliverer</h2>
+      <div class="container">
+        <p>{{ role }}</p>
+        <label for="identification"><b>Identification</b></label>
+        <input type="text" placeholder="Enter Identification" name="identification" required ngModel> 
+
+        <label for="nom"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="nom" required ngModel>
+    
+        <label for="mail"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="mail" required ngModel>
+          
+        <label for="phone"><b>Phone</b></label>
+        <input type="text" placeholder="Enter Phone" name="phone" required ngModel>
+
+        <label for="motdepasse"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="motdepasse" required ngModel>
+
+        <button type="submit">Add deliverer</button>
+      </div>
+    </form>
+</div>
