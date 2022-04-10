@@ -1,21 +1,18 @@
 <div class="card">
-    <form action="action_page.php" method="post">
+    <form #f="ngForm" (ngSubmit)="addProduct(f)" method="post">
       <h2>New products</h2>
         <div class="container">
           <label for="nom"><b>Name</b></label>
-          <input type="text" placeholder="Enter Name" name="nom" required>
+          <input type="text" placeholder="Enter Name" name="nom" required ngModel>
       
-          <label for="prixachat"><b>Buying price</b></label>
-          <input type="number" placeholder="Enter buying price" name="prixachat" required>
+          <label for="prixDAchat"><b>Buying price</b></label>
+          <input type="number" placeholder="Enter buying price" name="prixDAchat" required ngModel>
             
-          <label for="prixdeventerestaurant"><b>Restaurant sale price</b></label>
-          <input type="number" placeholder="Enter restaurant sale price" name="prixdeventerestaurant" required>
+          <label for="prixDeVenteRestaurant"><b>Restaurant sale price</b></label>
+          <input type="number" placeholder="Enter restaurant sale price" name="prixDeVenteRestaurant" required ngModel>
 
-          <label for="prixdeventeekaly"><b>E-kaly sale price</b></label>
-          <input type="number" placeholder="Enter e-kaly sale price" name="prixdeventeekaly" required>
-
-          <label for="image"><b>Picture</b></label>
-          <input type="text" placeholder="Enter image" name="image" required>
+          <label for="prixDeVenteEkaly"><b>E-kaly sale price</b></label>
+          <input type="number" placeholder="Enter e-kaly sale price" name="prixDeVenteEkaly" required ngModel>
 
           <button type="submit">Add product</button>
         </div>

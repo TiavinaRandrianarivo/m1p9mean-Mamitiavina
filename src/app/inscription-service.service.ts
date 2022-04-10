@@ -27,12 +27,18 @@ export class InscriptionServiceService {
     return throwError('Something bad happened: please try again later.');
   }*/
 
-  login(r:any){
+  login(r:any): Observable<any>{
     return this.http.post(baseUrl+'utilisateurs/login',r);
   }
 
-  list(role:string){
+  list(role:string): Observable<any>{
     return this.http.get(baseUrl+'utilisateurs/list/'+role);
+  }
+
+  insertplat(r:any){
+    return this.http.post(baseUrl+'plats/insertproduct',r).pipe(
+
+      );
   }
 
 }
